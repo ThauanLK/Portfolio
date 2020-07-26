@@ -1,0 +1,19 @@
+.home {
+  height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.link {
+  text-align: center;
+}
+
+.list {
+  margin: 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

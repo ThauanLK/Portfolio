@@ -6,7 +6,7 @@ function header() {
     <div className="headerContainer">
       <div className="container">
         <div className="headerPosition">
-          <div className="logo">Logo</div>
+          <div className="logo"></div>
           <div className="btnsContainer">
             <button className="standardBtn">Contato</button>
             <button className="standardBtn">Sobre</button>

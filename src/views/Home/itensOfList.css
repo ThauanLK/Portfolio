@@ -1,0 +1,8 @@
+.item {
+  background-color: darkgray;
+  width: 33%;
+  height: 251px;
+  border-radius: 25px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
