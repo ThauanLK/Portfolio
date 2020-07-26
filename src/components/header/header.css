@@ -1,0 +1,41 @@
+.headerContainer {
+  height: 15vh;
+  background-color: darkgrey;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1024px;
+  height: 100%;
+}
+
+.headerPosition {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  background-color: white;
+  height: 65px;
+  border-radius: 50%;
+  width: 65px;
+  text-align: center;
+}
+
+.btnsContainer {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+}
+
+.standardBtn {
+  background-color: white;
+  height: 36px;
+  border: none;
+  width: 165px;
+  border-radius: 25px;
+  font-size: 1em;
+}
