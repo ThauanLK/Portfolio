@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const List = styled.div`
-  display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-color: blue;
 `;
 
 export const Item = styled.div`

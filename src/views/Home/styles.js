@@ -6,5 +6,6 @@ export const Container = styled.div`
 `;
 
 export const Text = styled.p`
-  text-align:center;
+  text-align: center;
+  margin-bottom: 25px;
 `;
