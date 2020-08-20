@@ -43,12 +43,7 @@ function Contact() {
             value={value.message}
             onChange={onChangeHandler}
           />
-          <input
-            className="submitBtn"
-            type="submit"
-            value="Enviar"
-            onClick={() => history.push("/")}
-          />
+          <Button>Enviar</Button>
         </form>
       </ContentContainer>
     </Layout>
