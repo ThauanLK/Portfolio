@@ -47,7 +47,7 @@ function Contact() {
             className="submitBtn"
             type="submit"
             value="Enviar"
-            onSubmit={history.push("/")}
+            onClick={() => history.push("/")}
           />
         </form>
       </ContentContainer>

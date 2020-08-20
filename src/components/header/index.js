@@ -17,7 +17,7 @@ function header() {
         <Header>
           <Logo />
           <ButtonContainer>
-            <ButtonHeader as={Link} to="/contato" className="ButtonLink">
+            <ButtonHeader as={Link} to="/contato">
               Contato
             </ButtonHeader>
             <ButtonHeader as={Link} to="/sobre">
