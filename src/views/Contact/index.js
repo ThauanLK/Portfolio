@@ -1,31 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
+import Layout from "../../components/Layout/Layout";
+import { ContentContainer, Container } from "../../components/containers/index";
+import { Text } from "../../components/Text/index";
+import { useHistory } from "react-router-dom";
+import FormField from "./components/FormField/index";
+import useForm from "../../hooks/useForm/index";
 
 function Contact() {
+  const history = useHistory();
+
+  const { value, onChangeHandler } = useForm({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   return (
-    <div className="contact">
-      <h1>Entre em contato comigo</h1>
-      <div className="container">
+    <Layout>
+      <Text>
+        <h1>Entre em contato comigo</h1>
+      </Text>
+      <ContentContainer>
         <form>
-          <div className="formItens">
-            <label>Nome:</label>
-            <input placeholder="Digite seu nome..." />
-          </div>
-          <div className="formItens">
-            <label>Email:</label>
-            <input placeholder="Digite seu email..." type="email" />
-          </div>
-          <div className="formItens">
-            <label>Mensagem:</label>
-            <textarea
-              placeholder="Digite sua mensagem..."
-              type="text"
-              rows="15"
-            />
-          </div>
-          <input className="submitBtn" type="submit" value="Enviar" />
+          <FormField
+            label="Nome"
+            type="text"
+            name="name"
+            value={value.name}
+            onChange={onChangeHandler}
+          />
+          <FormField
+            label="Email"
+            type="text"
+            name="email"
+            value={value.email}
+            onChange={onChangeHandler}
+          />
+          <FormField
+            label="Mensagem"
+            type="textarea"
+            name="message"
+            value={value.message}
+            onChange={onChangeHandler}
+          />
+          <input
+            className="submitBtn"
+            type="submit"
+            value="Enviar"
+            onSubmit={history.push("/")}
+          />
         </form>
-      </div>
-    </div>
+      </ContentContainer>
+    </Layout>
   );
 }
 

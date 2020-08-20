@@ -1,5 +1,5 @@
 import React from "react";
-import { Item, List } from "./components/ItemOfList/index";
+import { Item, List, LineList } from "./components/ItemOfList/index";
 import { Container, Text } from "./styles";
 import Layout from "../../components/Layout/Layout";
 
@@ -11,10 +11,14 @@ function Home(props) {
           <h1>Meus repositórios</h1>
         </Text>
         <List>
-          <Item />
-          <Item />
-          <Item />
-          <Item />
+          <LineList>
+            <Item />
+            <Item />
+          </LineList>
+          <LineList>
+            <Item />
+            <Item />
+          </LineList>
         </List>
         <Text>
           Para ver a lista completa acesse:{" "}

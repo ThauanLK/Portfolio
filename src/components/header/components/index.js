@@ -10,6 +10,9 @@ export const ButtonHeader = styled.button`
   text-decoration: none;
   text-align: center;
   color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &:hover,
   &:focus {
     opacity: 0.5;

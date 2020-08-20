@@ -16,3 +16,10 @@ export const Item = styled.div`
   background-color: red;
   border-radius: 25px;
 `;
+
+export const LineList = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+`;
