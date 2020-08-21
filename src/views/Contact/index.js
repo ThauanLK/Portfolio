@@ -4,7 +4,9 @@ import { ContentContainer, Container } from "../../components/containers/index";
 import { Text } from "../../components/Text/index";
 import { useHistory } from "react-router-dom";
 import FormField from "./components/FormField/index";
+import { Button } from "./components/Button/index";
 import useForm from "../../hooks/useForm/index";
+import PropTypes from "prop-types";
 
 function Contact() {
   const history = useHistory();
@@ -49,5 +51,17 @@ function Contact() {
     </Layout>
   );
 }
+
+Contact.defaultProps = {
+  name: "text",
+  email: "text",
+  message: "text",
+};
+
+Contact.propTypes = {
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+};
 
 export default Contact;
