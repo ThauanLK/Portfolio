@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const List = styled.div`
+export const CardList = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -8,7 +8,7 @@ export const List = styled.div`
   background-color: blue;
 `;
 
-export const Item = styled.div`
+export const Card = styled.div`
   width: 300px;
   height: 300px;
   display: flex;
@@ -17,7 +17,7 @@ export const Item = styled.div`
   border-radius: 25px;
 `;
 
-export const LineList = styled.div`
+export const LineCardList = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-around;

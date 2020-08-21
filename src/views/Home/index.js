@@ -1,5 +1,5 @@
 import React from "react";
-import { Item, List, LineList } from "./components/ItemOfList/index";
+import { Card, CardList, LineCardList } from "./components/ItemOfList/index";
 import { Container, Text } from "./styles";
 import Layout from "../../components/Layout/Layout";
 
@@ -10,16 +10,16 @@ function Home(props) {
         <Text>
           <h1>Meus repositórios</h1>
         </Text>
-        <List>
-          <LineList>
-            <Item />
-            <Item />
-          </LineList>
-          <LineList>
-            <Item />
-            <Item />
-          </LineList>
-        </List>
+        <CardList>
+          <LineCardList>
+            <Card />
+            <Card/>
+          </LineCardList>
+          <LineCardList>
+            <Card />
+            <Card />
+          </LineCardList>
+        </CardList>
         <Text>
           Para ver a lista completa acesse:{" "}
           <a href="https://github.com/ThauanLK"> https://github.com/ThauanLK</a>
