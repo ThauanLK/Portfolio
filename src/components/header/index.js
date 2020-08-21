@@ -15,13 +15,13 @@ function header() {
     <HeaderContainer>
       <Container>
         <Header>
-          <Logo />
+          <Logo as={Link} to="/" />
           <ButtonContainer>
-            <ButtonHeader as={Link} to="/contato">
-              Contato
-            </ButtonHeader>
             <ButtonHeader as={Link} to="/sobre">
               Sobre
+            </ButtonHeader>
+            <ButtonHeader as={Link} to="/contato">
+              Contato
             </ButtonHeader>
           </ButtonContainer>
         </Header>

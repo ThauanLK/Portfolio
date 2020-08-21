@@ -4,4 +4,6 @@ export const List = styled.ul`
   text-decoration: none;
 `;
 
-export const ItemList = styled.li``;
+export const ItemList = styled.li`
+  list-style: none;
+`;

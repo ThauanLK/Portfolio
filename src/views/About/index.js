@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../../components/Layout/Layout";
-import { Container, ContentContainer } from "../../components/containers/index";
+import { ContentContainer } from "../../components/containers/index";
 import { Text, Title } from "../../components/Text/index";
-import {} from "./components/List/List"
+import { List, ItemList } from "./components/List/List";
 
 export default function index() {
   return (
@@ -31,7 +31,24 @@ export default function index() {
           mauris lobortis sapien, ac tincidunt lectus sem a ligula.
         </Text>
         <Title>Currículo</Title>
-        
+        <List>
+          Graduações
+          <ItemList>
+            Ensino Médio Completo no Colégio Pedro Segundo - Unidade Tijuca 2.
+          </ItemList>
+          <ItemList>
+            Cursando a Universidade Federal Fluminense (UFF) - desde 2017.
+          </ItemList>
+        </List>
+        <List>
+          Experiência Anterior
+          <ItemList>
+            Desenvolvedor Front End da IN Junior de Agosto de 2019 ~ Atualmente.
+          </ItemList>
+          <ItemList>
+            Diretor Comercial da IN Junior de Janeiro de 2020 ~ Atualmente.
+          </ItemList>
+        </List>
       </ContentContainer>
     </Layout>
   );
