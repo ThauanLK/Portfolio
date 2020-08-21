@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardList, LineCardList } from "./components/ItemOfList/index";
+import { Title } from "../../components/Text/index";
 import { Container, Text } from "./styles";
 import Layout from "../../components/Layout/Layout";
 
@@ -7,13 +8,11 @@ function Home(props) {
   return (
     <Layout>
       <Container>
-        <Text>
-          <h1>Meus repositórios</h1>
-        </Text>
+        <Title>Meus repositórios</Title>
         <CardList>
           <LineCardList>
             <Card />
-            <Card/>
+            <Card />
           </LineCardList>
           <LineCardList>
             <Card />
