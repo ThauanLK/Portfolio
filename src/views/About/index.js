@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../../components/Layout/Layout";
 import { Container, ContentContainer } from "../../components/containers/index";
 import { Text, Title } from "../../components/Text/index";
+import {} from "./components/List/List"
 
 export default function index() {
   return (
