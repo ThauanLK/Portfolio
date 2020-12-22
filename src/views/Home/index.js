@@ -10,16 +10,7 @@ function Home(props) {
     <Layout>
       <ContentContainer>
         <Title>Meus repositórios</Title>
-        <CardList>
-          <LineCardList>
-            <Card />
-            <Card />
-          </LineCardList>
-          <LineCardList>
-            <Card />
-            <Card />
-          </LineCardList>
-        </CardList>
+        
         <Text>
           Para ver a lista completa acesse:{" "}
           <a href="https://github.com/ThauanLK"> https://github.com/ThauanLK</a>
