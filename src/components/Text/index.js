@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Text = styled.p`
-  text-align: center;
+ 
   margin-bottom: 25px;
+  font-family: 'Montserrat', sans-serif;
 `;
 
 export const Title = styled.h1`
@@ -10,4 +11,5 @@ export const Title = styled.h1`
   margin: 2% 0;
   font-weight: bold;
   font-size: 1.8em;
+  font-family: 'Montserrat', sans-serif;
 `;
