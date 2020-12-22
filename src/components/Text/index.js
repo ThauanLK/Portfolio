@@ -7,5 +7,7 @@ export const Text = styled.p`
 
 export const Title = styled.h1`
   text-align: center;
-  margin-bottom: 25px;
+  margin: 2% 0;
+  font-weight: bold;
+  font-size: 1.8em;
 `;

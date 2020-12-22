@@ -3,8 +3,10 @@ import Header from "../header/index";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding-top: 20vh;
+  padding-top: 8%;
 `;
+
+
 function Layout(props) {
   return (
     <React.Fragment>
