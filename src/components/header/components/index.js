@@ -7,6 +7,7 @@ export const HeaderContainer = styled.div`
   background-color: var(--white);
   width: 100%;
   box-shadow: 0px 4px 5px 0px var(--blue);
+  position: fixed;
 `;
 
 export const Container = styled.div`

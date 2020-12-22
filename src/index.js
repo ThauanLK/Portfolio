@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import { BrowserRouter, Switch, Route,} from "react-router-dom";
 import Home from "./views/Home/index";
 import * as serviceWorker from './serviceWorker';
+import "./constants/reset.css";
+
 
 const Pagina404 = () => <div>Página 404</div>;
 
