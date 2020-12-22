@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./components/index";
 import {
-  ButtonHeader,
   ButtonContainer,
   Container,
   Header,
   Logo,
   HeaderContainer,
+  LinkHeader
 } from "./components/index";
 
 function header() {
@@ -15,14 +15,12 @@ function header() {
     <HeaderContainer>
       <Container>
         <Header>
-          <Logo as={Link} to="/" />
+          <Logo as={Link} to="#home" />
           <ButtonContainer>
-            <ButtonHeader as={Link} to="/sobre">
-              Sobre
-            </ButtonHeader>
-            <ButtonHeader as={Link} to="/contato">
-              Contato
-            </ButtonHeader>
+            <LinkHeader  href={"#projetos"}>Meus Projetos</LinkHeader>
+            <LinkHeader  href={"#curriculo"}>Curriculo</LinkHeader>
+            <LinkHeader  href={"#sobre"}>Sobre</LinkHeader>
+            <LinkHeader  href={"#contato"}>Contato</LinkHeader>
           </ButtonContainer>
         </Header>
       </Container>

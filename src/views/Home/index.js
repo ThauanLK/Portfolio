@@ -9,12 +9,21 @@ function Home(props) {
   return (
     <Layout>
       <ContentContainer>
+        <section id="sobre">
+        </section>
+        <section>
         <Title>Meus repositórios</Title>
-        
         <Text>
           Para ver a lista completa acesse:{" "}
           <a href="https://github.com/ThauanLK"> https://github.com/ThauanLK</a>
         </Text>
+        </section>
+        <section id="curriculo">
+
+        </section>
+        <section id="contato">
+
+        </section>
       </ContentContainer>
     </Layout>
   );
