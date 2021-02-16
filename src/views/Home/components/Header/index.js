@@ -8,6 +8,7 @@ import {
   HeaderContainer,
   LinkHeader
 } from "./components/index";
+import MenuOptions from "./menus";
 
 function header() {
   return (
@@ -16,10 +17,9 @@ function header() {
         <Header>
           <Logo/>
           <LinksContainer>
-            <LinkHeader  href={"#projetos"}>Meus Projetos</LinkHeader>
-            <LinkHeader  href={"#curriculo"}>Curriculo</LinkHeader>
-            <LinkHeader  href={"#sobre"}>Sobre</LinkHeader>
-            <LinkHeader  href={"#contato"}>Contato</LinkHeader>
+          {MenuOptions.map((eachOption,index) => (
+            <LinkHeader  key={index} href={eachOption.url}>{eachOption.title}</LinkHeader>
+          ))}
           </LinksContainer>
         </Header>
       </Container>

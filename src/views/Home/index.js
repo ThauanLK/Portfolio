@@ -7,8 +7,7 @@ import {ContactWithMe} from "../../services/index-email";
 import FormField from "./components/FormField/index";
 import useForm from "../../hooks/useForm/index";
 import Curriculo from "../../documents/CurriculoThauan.pdf"
-import { PDFDownloadLink } from '@react-pdf/renderer';
-
+import ProgramLanguages from "./ProgramLanguages";
 
 function Home() {
   const [repos, setRepos] = useState([]);
@@ -45,7 +44,15 @@ function Home() {
         </section>
         <section id="curriculo">
           <Title>Currículo</Title>
-          <Text></Text>
+          <Text>Formação Academica</Text>
+          <Text>Experiencia Anterior</Text>
+          <Text>Conhecimentos</Text>
+          {ProgramLanguages.map((eachLanguage,index) => (
+            <div key={index}>
+              <Text >{eachLanguage.name}</Text>
+              <Text>{eachLanguage.level}</Text>
+            </div>
+          ))}
           <ButtonContainer>
             <a href={Curriculo} download="Curriculo-Thauan Corrêa de Oliveira">
             <Button>

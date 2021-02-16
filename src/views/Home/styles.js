@@ -39,7 +39,6 @@ export const Title = styled.h1`
   font-family: 'Montserrat', sans-serif;
   `;
 
-
 export const Button = styled.button`
   background-color: var(--white);
   border-radius: 25px;
@@ -57,11 +56,12 @@ export const Button = styled.button`
     color: var(--white);
     font-weight:bold;
   }
+
   &:active {
   background-color: var(--pressedButton);
   box-shadow: 0 5px var(--pressedShadow);
   transform: translateY(4px);
-}
+  }
 `;
 
 export const ButtonContainer = styled.div`
