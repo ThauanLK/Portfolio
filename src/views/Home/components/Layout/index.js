@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../header/index";
+import Header from "../Header/index";
 import styled from "styled-components";
 
 export const Container = styled.div`

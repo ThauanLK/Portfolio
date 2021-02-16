@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { Card, CardList, LineCardList } from "./components/ItemOfList/index";
-import { Title } from "../../components/Text/index";
-import { Container, Text } from "./styles";
-import { ContentContainer } from "../../components/containers/index";
-import Layout from "../../components/Layout/Layout";
+import { Container, Text, ContentContainer, Title } from "./styles";
+import Layout from "./components/Layout/index";
 import {getRepo} from "../../services/index";
 
 function Home(props) {
@@ -29,7 +27,7 @@ function Home(props) {
         <Title>Meus repositórios</Title>
         <Text>
           Para ver a lista completa acesse:{" "}
-          <a href="https://github.com/ThauanLK"> https://github.com/ThauanLK</a>
+          <a href="https://github.com/ThauanLK" target="blank"> https://github.com/ThauanLK</a>
         </Text>
         </section>
         <section id="curriculo">
