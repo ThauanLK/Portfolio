@@ -8,7 +8,6 @@ export const Container = styled.div`
   
 `;
 
-
 function Layout(props) {
   return (
     <React.Fragment>

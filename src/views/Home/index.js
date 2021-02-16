@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { Card, CardList, LineCardList } from "./components/ItemOfList/index";
-import { Container, Text, ContentContainer, Title, Button, ButtonContainer } from "./styles";
+import { Container, Text, ContentContainer, Title, Button, ButtonContainer, Subtitle } from "./styles";
 import Layout from "./components/Layout/index";
 import {getRepo} from "../../services/index-git";
 import {ContactWithMe} from "../../services/index-email";
@@ -8,6 +8,7 @@ import FormField from "./components/FormField/index";
 import useForm from "../../hooks/useForm/index";
 import Curriculo from "../../documents/CurriculoThauan.pdf"
 import ProgramLanguages from "./ProgramLanguages";
+import {EachLine} from "./components/LineProgram/index";
 
 function Home() {
   const [repos, setRepos] = useState([]);
@@ -46,12 +47,12 @@ function Home() {
           <Title>Currículo</Title>
           <Text>Formação Academica</Text>
           <Text>Experiencia Anterior</Text>
-          <Text>Conhecimentos</Text>
+          <Subtitle>Conhecimentos</Subtitle>
           {ProgramLanguages.map((eachLanguage,index) => (
-            <div key={index}>
+            <EachLine key={index}>
               <Text >{eachLanguage.name}</Text>
               <Text>{eachLanguage.level}</Text>
-            </div>
+            </EachLine>
           ))}
           <ButtonContainer>
             <a href={Curriculo} download="Curriculo-Thauan Corrêa de Oliveira">

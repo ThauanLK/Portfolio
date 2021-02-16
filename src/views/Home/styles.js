@@ -37,7 +37,14 @@ export const Title = styled.h1`
   font-weight: bold;
   font-size: 1.8em;
   font-family: 'Montserrat', sans-serif;
-  `;
+`;
+
+export const Subtitle = styled.h2`
+  font-weight: bold;
+  font-size: 1.2em;
+  font-family: 'Montserrat', sans-serif;
+  margin: 2% 0;
+`;
 
 export const Button = styled.button`
   background-color: var(--white);

@@ -46,8 +46,11 @@ const ProgramLanguages = [
     {
         name:"CSS3",
         level: 2
+    },
+    {
+        name:"Inglês",
+        level: 2
     }
-
 ]
 
 export default ProgramLanguages;
