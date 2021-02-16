@@ -31,18 +31,19 @@ width: 65px;
 text-align: center;
 `;
 
-export const ButtonContainer = styled.div`
-width: 30%;
-display:flex;
+export const LinksContainer = styled.div`
+width: 40%;
+display: flex;
 justify-content: space-between;
 `;
 
 export const LinkHeader = styled.a`
 color: var(--black);
-text-decoration:none;
-&: hover{
-transition: 0.3s;
-color: var(--blue);
-font-weight: bold;
+text-decoration: none;
+font-family: 'Montserrat', sans-serif;
+&:hover{
+    transition: 0.2s;
+    color: var(--blue);
+    font-weight: bold;
 }
 `;

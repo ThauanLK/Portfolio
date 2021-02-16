@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
+import "../../../../constants/colors.css";
 
 const WrapperFormField = styled.div`
   position: relative;
@@ -35,11 +36,11 @@ const Input = styled.input`
   width: 100%;
   height: 20px;
   font-size: 18px;
-
+  font-family: 'Montserrat', sans-serif;
   outline: 0;
   border: 0;
   border-top: 4px solid transparent;
-  border-bottom: 4px solid #53585d;
+  border-bottom: 4px solid var(--black);
 
   padding: 16px 16px;
   margin-bottom: 45px;
@@ -49,7 +50,7 @@ const Input = styled.input`
   transition: border-color 0.3s;
 
   &:focus {
-    border-bottom-color: var(--primary);
+    border-bottom-color: var(--blue);
   }
   &:focus:not([type="color"]) + ${Label.Text} {
     transform: scale(0.6) translateY(-10px);
@@ -66,7 +67,7 @@ const Input = styled.input`
     );
   }}
 `;
-function FormField({ label, type, name, value, onChange, suggestions }) {
+function FormField({ label, type, name, value, onChange }) {
   const isTextArea = type === "textarea";
   const fieldId = `id_${name}`;
   const tag = isTextArea ? "textarea" : "input";
@@ -93,7 +94,6 @@ function FormField({ label, type, name, value, onChange, suggestions }) {
 FormField.defaultProps = {
   type: "text",
   value: "",
-  suggestions: [],
 };
 
 FormField.propTypes = {

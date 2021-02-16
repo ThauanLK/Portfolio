@@ -22,7 +22,3 @@ export const  getRepo = async () => {
     console.log(err);
   } 
 }
-
-export const ContactWithMe = async () => {
-
-}

@@ -4,6 +4,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding-top: 8%;
+  /* background: linear-gradient(180deg, rgba(250,250,250,1) 32%, rgba(23,148,152,1) 73%); */
+  
 `;
 
 
