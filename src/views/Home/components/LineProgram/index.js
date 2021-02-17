@@ -32,6 +32,7 @@ const MakeTogether = styled.div`
     display:flex;
     align-items:inherit;
     width: 25%;
+   
     &:hover{
         cursor: pointer;
         img{
@@ -39,9 +40,8 @@ const MakeTogether = styled.div`
             -ms-transform: scale(1.3);
             transform: scale(1.3);
             margin-right: 9%;
-            transition:0.3;
-        } 
-        
+            transition:0.3s;
+        }     
     }
 `;
 

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { Container, Text, ContentContainer, Title, Button, ButtonContainer, Subtitle, Git, Link, Divider } from "./styles";
+import { Container,Developer ,Text,Section, ContentContainer, Title, Button, ButtonContainer, Subtitle, Git, Link, Divider, ItalicText, BoldText } from "./styles";
 import Layout from "./components/Layout/index";
 import {getRepo} from "../../services/index-git";
 import {ContactWithMe} from "../../services/index-email";
@@ -26,43 +26,46 @@ function Home() {
   return (
     <Layout>
       <ContentContainer>
-        <section id="apresentacao">
-
-        </section>
-        <section id="sobre">
+        <Section id="apresentacao">
+          <p>Olá, meu nome é Thauan Corrêa, e eu sou um</p>
+          <Developer>Desenvolvedor Front-End</Developer>
+          <p>Depois de conhecer </p>
+        </Section>
+        <Section id="sobre">
           <Title>Sobre Mim</Title>
           <Container>
             <Text>{AboutMe.text}</Text>
           </Container>
-        </section>
-        <section id="curriculo">
+        </Section>
+        <Section id="curriculo">
           <Title>Currículo</Title>
           <Subtitle>Formação Academica</Subtitle>
           {Academics.slice(0, Academics.length -1).map((eachAcademic,index)=>(
             <div key={index}>
               <li>
-                <Text>{eachAcademic.title}</Text>
+                <BoldText>{eachAcademic.title}</BoldText>
+                <ItalicText>{eachAcademic.year}</ItalicText>
                 <Text>{eachAcademic.grade}</Text>
-                <Text>{eachAcademic.year}</Text>
-                <Divider/>
               </li>
             </div>
           ))}
            {Academics.slice(Academics.length-1, Academics.length).map((eachAcademic,index)=>(
             <div key={index}>
               <li>
-                <Text>{eachAcademic.title}</Text>
+                <BoldText>{eachAcademic.title}</BoldText>
+                <ItalicText>{eachAcademic.year}</ItalicText>
                 <Text>{eachAcademic.grade}</Text>
-                <Text>{eachAcademic.year}</Text>
               </li>
             </div>
           ))}
           <Subtitle>Experiencia Anterior</Subtitle>
           {XpAnterior.map((eachXp,index)=>(
             <div key={index}>
-              <Text>{eachXp.title}</Text>
-              <Text>{eachXp.period}</Text>
-              <Text>{eachXp.description}</Text>
+              <li>
+                <BoldText>{eachXp.title}</BoldText>
+                <ItalicText>{eachXp.period}</ItalicText>
+                <Text>{eachXp.description}</Text>
+              </li>
             </div>
           ))}
           <Subtitle>Conhecimentos</Subtitle>
@@ -74,14 +77,14 @@ function Home() {
             </Button>
             </a>
           </ButtonContainer>
-        </section>
-        <section id="projetos">
-          <Title>Meus repositórios</Title>
+        </Section>
+        <Section id="projetos">
+          <Title>Meus projetos</Title>
           <Git>
             Para ver a lista completa acesse:{" "}
             <Link href="https://github.com/ThauanLK" target="blank"> https://github.com/ThauanLK</Link>
           </Git>
-        </section>
+        </Section>
         <section id="contato">
           <Title>Entre Contato Comigo</Title>
           <form onSubmit={(e)=> {

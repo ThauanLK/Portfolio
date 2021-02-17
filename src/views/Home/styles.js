@@ -31,6 +31,15 @@ export const Text = styled.p`
   font-family: 'Montserrat', sans-serif;
 `;
 
+
+export const Section = styled.section`
+  width: 100%;
+  height: auto;
+  border-bottom: solid 2px var(--shadow);
+  margin-bottom: 2%;
+  padding:2% 0;
+`;
+
 export const Git = styled.p`
   text-align: center;
   font-family: 'Montserrat', sans-serif;
@@ -40,18 +49,19 @@ export const Link = styled.a`
   
 `
 export const Divider = styled.div`
-  background-color: red;
+  background-color: var(--shadow);
   width: 100%;
   height:2px;
+  margin: 2% 0;
 `;
 
 
 export const Title = styled.h1`
   text-align: center;
-  margin: 3% 0;
   font-weight: bold;
   font-size: 1.8em;
   font-family: 'Montserrat', sans-serif;
+  margin-bottom: 3%;
 `;
 
 export const Subtitle = styled.h2`
@@ -92,3 +102,40 @@ export const ButtonContainer = styled.div`
   margin:5% auto;
 `;
 
+export const BoldText = styled.h3`
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom:1%;
+`;
+
+export const ItalicText = styled.p`
+  font-style:italic;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom:0.5%;
+`;
+
+export const Developer = styled.h1`
+  font-family:'Montserrat', sans-serif;
+  font-size: 4em;
+  font-weight: 600;
+  /* animation: changeColor linear 2s infinite alternate;
+  @keyframes changeColor {
+  from {color: var(--blue);}
+  to {color: var(--blue2);}
+} */
+
+background: linear-gradient(to right, #000 20%, #bada55 30%, #bada44 70%, #000 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: textShine 7s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  to {
+    background-position: 200%;
+  }
+}
+`;

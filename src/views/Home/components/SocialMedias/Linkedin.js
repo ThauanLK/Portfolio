@@ -7,7 +7,7 @@ const SVGWrapper = styled.svg`
   height: 120px;
   &:hover {
     .linkedin{
-        animation:showUp 1.5s ease-in-out;
+        animation:showUp 1s ease-in-out;
 
     }
     @keyframes showUp{
