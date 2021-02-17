@@ -1,5 +1,13 @@
 import React, {useEffect, useState} from "react";
-import { Container,Developer ,Text,Section, ContentContainer, Title, Button, ButtonContainer, Subtitle, Git, Link, Divider, ItalicText, BoldText } from "./styles";
+import { Container,
+  Developer ,
+  Text,
+  Section,
+  ContentContainer,
+  Title, 
+  Button, 
+  ButtonContainer, 
+  Subtitle, Git, Link, ItalicText, BoldText } from "./styles";
 import Layout from "./components/Layout/index";
 import {getRepo} from "../../services/index-git";
 import {ContactWithMe} from "../../services/index-email";
@@ -21,8 +29,7 @@ function Home() {
     setRepos(getRepo());
   },[]);
 
-  console.log(Academics.slice(0, Academics.length -1));
-
+  console.log(repos);
   return (
     <Layout>
       <ContentContainer>
