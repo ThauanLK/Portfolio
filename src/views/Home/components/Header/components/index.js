@@ -8,6 +8,7 @@ background-color: var(--white);
 width: 100%;
 box-shadow: 0px 4px 5px 0px var(--blue);
 position: fixed;
+z-index: 5;
 `;
 
 export const Container = styled.div`
