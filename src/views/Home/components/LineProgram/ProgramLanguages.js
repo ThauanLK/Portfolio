@@ -16,7 +16,7 @@ const ProgramLanguages = [
     },
     {
         name: "JavaScript",
-        level: 2,
+        level: 3.5,
         image: "https://raw.githubusercontent.com/voodootikigod/logo.js/master/js.png",
     },
     {
