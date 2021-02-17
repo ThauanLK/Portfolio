@@ -45,7 +45,7 @@ const ProgramLanguages = [
         image: "https://icons-for-free.com/iconfiles/png/512/design+development+facebook+framework+mobile+react+icon-1320165723839064798.png",
     },
     {
-        name:"Git",
+        name:"Git && Git Flow",
         level: 2.5,
         image: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
     },

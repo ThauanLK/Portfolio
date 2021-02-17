@@ -33,6 +33,7 @@ const MakeTogether = styled.div`
     align-items:inherit;
     width: 25%;
     &:hover{
+        cursor: pointer;
         img{
             -webkit-transform: scale(1.3);
             -ms-transform: scale(1.3);

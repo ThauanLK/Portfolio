@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { Container, Text, ContentContainer, Title, Button, ButtonContainer, Subtitle, Git, Link } from "./styles";
+import { Container, Text, ContentContainer, Title, Button, ButtonContainer, Subtitle, Git, Link, Divider } from "./styles";
 import Layout from "./components/Layout/index";
 import {getRepo} from "../../services/index-git";
 import {ContactWithMe} from "../../services/index-email";
@@ -21,9 +21,7 @@ function Home() {
     setRepos(getRepo());
   },[]);
 
-  const br = () => {
-    return <br></br>
-  }
+  console.log(Academics.slice(0, Academics.length -1));
 
   return (
     <Layout>
@@ -40,11 +38,23 @@ function Home() {
         <section id="curriculo">
           <Title>Currículo</Title>
           <Subtitle>Formação Academica</Subtitle>
-          {Academics.map((eachAcademic,index)=>(
+          {Academics.slice(0, Academics.length -1).map((eachAcademic,index)=>(
             <div key={index}>
-              <Text>{eachAcademic.title}</Text>
-              <Text>{eachAcademic.grade}</Text>
-              <Text>{eachAcademic.year}</Text>
+              <li>
+                <Text>{eachAcademic.title}</Text>
+                <Text>{eachAcademic.grade}</Text>
+                <Text>{eachAcademic.year}</Text>
+                <Divider/>
+              </li>
+            </div>
+          ))}
+           {Academics.slice(Academics.length-1, Academics.length).map((eachAcademic,index)=>(
+            <div key={index}>
+              <li>
+                <Text>{eachAcademic.title}</Text>
+                <Text>{eachAcademic.grade}</Text>
+                <Text>{eachAcademic.year}</Text>
+              </li>
             </div>
           ))}
           <Subtitle>Experiencia Anterior</Subtitle>
@@ -52,7 +62,6 @@ function Home() {
             <div key={index}>
               <Text>{eachXp.title}</Text>
               <Text>{eachXp.period}</Text>
-              {/* {eachXp.description.normalize} */}
               <Text>{eachXp.description}</Text>
             </div>
           ))}

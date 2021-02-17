@@ -39,6 +39,12 @@ export const Git = styled.p`
 export const Link = styled.a`
   
 `
+export const Divider = styled.div`
+  background-color: red;
+  width: 100%;
+  height:2px;
+`;
+
 
 export const Title = styled.h1`
   text-align: center;
