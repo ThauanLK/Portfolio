@@ -26,10 +26,19 @@ export const ContentContainer = styled.div`
   `;
 
 export const Text = styled.p`
-  margin-bottom: 25px;
+  margin-bottom: 5px;
+  line-height: 1em;
+  font-family: 'Montserrat', sans-serif;
+`;
+
+export const Git = styled.p`
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 `;
+
+export const Link = styled.a`
+  
+`
 
 export const Title = styled.h1`
   text-align: center;

@@ -1,15 +1,15 @@
 const MenuOptions =    [
     {
-        title: "Meus Projetos",
-        url: "#projetos"
+        title: "Sobre",
+        url: "#sobre"
     },
     {
         title: "Curriculo",
         url: "#curriculo"
     },
     {
-        title: "Sobre",
-        url: "#sobre"
+        title: "Meus Projetos",
+        url: "#projetos"
     },
     {
         title:"Contato",
