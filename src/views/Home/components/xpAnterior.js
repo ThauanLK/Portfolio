@@ -2,8 +2,7 @@ export const XpAnterior = [
     {
         title:"Desenvolvedor Front End",
         period: "INJunior Outubro de 2019 ~ Fevereiro de 2021",
-        description: "Programador de React.js, CSS3, HTML5 e WordPress Instrutor de Banco de Dados, React.js e React Native em treinamentos internos. Gerente/desenvolvedor de alguns projetos da empresa, tendo que realizar o projeto de forma ágil, com entrega semais.",
-    },
+        description: "Nesta empresa eu fui desenvolvedor front-end, foi minha primeira experiência, e utilizei HTML5, CSS3, Wordpress, React.js e React Native durante o meu período lá. Além de desenvolvedor, eu apliquei treinamentos, sendo instrutor e monitor, de todas as tecnologias anteriormente ditas e de Banco de dados também."    },
     {
         title: "Estágiario em Automação de Testes (QA)",
         period:"PrimeUp Novembro de 2020 ~ Atualmente",

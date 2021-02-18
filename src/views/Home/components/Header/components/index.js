@@ -3,7 +3,8 @@ import "../../../../../constants/colors.css";
 
 
 export const HeaderContainer = styled.div`
-height: 15vh;
+height: 13vh;
+-moz-height: 15vh;
 background-color: var(--white);
 width: 100%;
 box-shadow: 0px 4px 5px 0px var(--blue);

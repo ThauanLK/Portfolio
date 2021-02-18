@@ -27,17 +27,16 @@ export const ContentContainer = styled.div`
 
 export const Text = styled.p`
   margin-bottom: 5px;
-  line-height: 1em;
+  line-height: 1.5em;
+  font-size: 1em;
   font-family: 'Montserrat', sans-serif;
 `;
-
 
 export const Section = styled.section`
   width: 100%;
   height: auto;
-  border-bottom: solid 2px var(--shadow);
   margin-bottom: 2%;
-  padding:2% 0;
+  padding-top:8%;
 `;
 
 export const Git = styled.p`
@@ -52,11 +51,11 @@ export const Divider = styled.div`
   background-color: var(--shadow);
   width: 100%;
   height:2px;
-  margin: 2% 0;
+  margin-top: 8%;
 `;
 
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   text-align: center;
   font-weight: bold;
   font-size: 1.8em;
@@ -64,7 +63,7 @@ export const Title = styled.h1`
   margin-bottom: 3%;
 `;
 
-export const Subtitle = styled.h2`
+export const Subtitle = styled.h3`
   font-weight: bold;
   font-size: 1.2em;
   font-family: 'Montserrat', sans-serif;
@@ -102,20 +101,27 @@ export const ButtonContainer = styled.div`
   margin:5% auto;
 `;
 
-export const BoldText = styled.h3`
+export const BoldText = styled.h4`
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
   margin-bottom:1%;
 `;
 
-export const ItalicText = styled.p`
+export const ItalicText = styled.pre`
   font-style:italic;
   font-family: 'Montserrat', sans-serif;
-  margin-bottom:0.5%;
+  margin-bottom:1%;
+  -moz-tab-size: 16; /* Firefox */
+  tab-size: 16;
+`;
+
+export const ApresentationText = styled.p`
+  font-size: 2em;
+  font-family: 'Ubuntu', sans-serif;
 `;
 
 export const Developer = styled.h1`
-  font-family:'Montserrat', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 4em;
   font-weight: 600;
   /* animation: changeColor linear 2s infinite alternate;
@@ -139,11 +145,27 @@ background: linear-gradient(to right, #000 20%, #bada55 30%, #bada44 70%, #000 8
 }
 `;
 
-export const Form = styled.form`
+export const FormContainer = styled.div`
+  width: 100%;
+  display:flex;
+  justify-content:center;
+`;
 
+
+export const Form = styled.form`
+  width: 75%;
+  font-family:'Montserrat', sans-serif;
 `;
 
 export const ApresentationTitle = styled.p`
   font-size: 2.5em;
   font-family:'Montserrat', sans-serif;
+`;
+
+
+export const Li = styled.li`
+  width: 100%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  list-style-type: disc
 `;
