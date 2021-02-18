@@ -24,17 +24,33 @@ export const Card = styled.div`
     -webkit-box-shadow: -10px 10px 5px 0px var(--shadow);
     -moz-box-shadow: -10px 10px 5px 0px var(--shadow);
     box-shadow: -10px 10px 5px 0px var(--shadow);
+    &:hover{
+        Img{
+         opacity:0.3; 
+         transform:scale(1.2);
+         transition:0.2s;
+     }
+     TextHover{
+         opacity:1;
+     }
+    }
+`;
+
+export const TextHover = styled.p`
+    transition: .5s ease;
+    opacity: 0;
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); */
+    text-align: center;
 `;
 
 export const TitleRepo = styled.p`
-
 `;
 
 export const  ImgRepo = styled.img`
     content:fill;
-    &:hover{
-        /* filter:grayscale(5%); */
-        transform:scale(1.2);
-        transition:0.2s;
-    }
+  
 `
