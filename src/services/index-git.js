@@ -12,12 +12,10 @@ const config = {
   },
 };
 
-export const  getRepo = async () => {
+export const  getRepo = async (_callback) => {
   try{
     const response = await api.get(`/users/${user}/repos`,config);
-    console.log(response.data);
-    return response.data;
-
+    return new Promise(()=>_callback(response));
   } catch (err) {
     console.log(err);
   } 

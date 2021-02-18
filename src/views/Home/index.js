@@ -16,6 +16,7 @@ import useForm from "../../hooks/useForm/index";
 import Curriculo from "../../documents/CurriculoThauan.pdf"
 import {EachLine} from "./components/LineProgram/index";
 import {AboutMe,Academics,XpAnterior} from "./components/xpAnterior";
+import ListOfCards from "./components/ItemOfList/index";
 
 function Home() {
   const [repos, setRepos] = useState([]);
@@ -26,15 +27,18 @@ function Home() {
   });
 
   useEffect(() => {
-    setRepos(getRepo());
+    getRepo((response)=>{
+      if(response.status >= 200 && response.status <= 299) setRepos(Array.from(response.data))
+    })
   },[]);
 
-  console.log(repos);
+  console.log("A",repos);
+
   return (
     <Layout>
       <ContentContainer>
         <Section id="apresentacao">
-          <p>Olá, meu nome é Thauan Corrêa, e eu sou um</p>
+          <p>Olá <span>😉</span>, me chamo é Thauan Corrêa, e eu sou um</p>
           <Developer>Desenvolvedor Front-End</Developer>
           <p>Depois de conhecer </p>
         </Section>
@@ -87,6 +91,7 @@ function Home() {
         </Section>
         <Section id="projetos">
           <Title>Meus projetos</Title>
+          {repos === [] ? (<div><p>Carregando...</p></div>) : (<ListOfCards repos={repos}/> ) }
           <Git>
             Para ver a lista completa acesse:{" "}
             <Link href="https://github.com/ThauanLK" target="blank"> https://github.com/ThauanLK</Link>
@@ -113,3 +118,5 @@ function Home() {
 }
 
 export default Home;
+
+

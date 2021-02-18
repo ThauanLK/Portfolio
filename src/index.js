@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route,} from "react-router-dom";
 import Home from "./views/Home/index";
 import * as serviceWorker from './serviceWorker';
 import "./constants/reset.css";
-
+import Lucas from "./views/Lucas/index";
 
 const Pagina404 = () => <div>Página 404</div>;
 
@@ -12,6 +12,7 @@ ReactDOM.render(
       <BrowserRouter>
         <Switch>
           <Route path="/" component={Home} exact />
+          <Route path="/lucas" component={Lucas} exact/>
           <Route component={Pagina404} />
           </Switch>
       </BrowserRouter>,

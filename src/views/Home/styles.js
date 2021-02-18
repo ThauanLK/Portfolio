@@ -131,11 +131,19 @@ background: linear-gradient(to right, #000 20%, #bada55 30%, #bada44 70%, #000 8
   text-fill-color: transparent;
   background-size: 200% auto;
   animation: textShine 7s ease-in-out infinite alternate;
-}
 
 @keyframes textShine {
   to {
     background-position: 200%;
   }
 }
+`;
+
+export const Form = styled.form`
+
+`;
+
+export const ApresentationTitle = styled.p`
+  font-size: 2.5em;
+  font-family:'Montserrat', sans-serif;
 `;

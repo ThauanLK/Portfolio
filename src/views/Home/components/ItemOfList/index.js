@@ -1,25 +1,17 @@
-import styled from "styled-components";
+import React from 'react';
+import {CardContainer,Card,TitleRepo,ImgRepo} from "./styles";
 
-export const CardList = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  background-color: blue;
-`;
+const ListCards = (vector) => {
+  return (
+    <CardContainer>
+    {vector.repos.map((eachRepo,index)=>(
+      <Card key={index}>
+        <ImgRepo src="https://img.icons8.com/wired/64/000000/no-image.png"/>
+        <TitleRepo>Nome do Projeto:{eachRepo.name}</TitleRepo>
+      </Card>
+    ))} 
+  </CardContainer>
+  )
+}
 
-export const Card = styled.div`
-  width: 300px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  background-color: red;
-  border-radius: 25px;
-`;
-
-export const LineCardList = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-`;
+export default ListCards
