@@ -15,7 +15,9 @@ function header() {
     <HeaderContainer>
       <Container>
         <Header>
-          <Logo/>
+          <a href="#">
+            <Logo/>
+          </a>
           <LinksContainer>
           {MenuOptions.map((eachOption,index) => (
             <LinkHeader  key={index} href={eachOption.url}>{eachOption.title}</LinkHeader>

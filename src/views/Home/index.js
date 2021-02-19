@@ -22,9 +22,11 @@ import Curriculo from "../../documents/CurriculoThauan.pdf"
 import {EachLine} from "./components/LineProgram/index";
 import {AboutMe,Academics,XpAnterior} from "./components/xpAnterior";
 import ListOfCards from "./components/ItemOfList/index";
+import Typed from 'react-typed';
 
 function Home() {
   const [repos, setRepos] = useState([]);
+  const [typing,setTyping] = useState(true);
   const { value, onChangeHandler,clearForm } = useForm({
     name: "",
     email: "",
@@ -36,15 +38,25 @@ function Home() {
       if(response.status >= 200 && response.status <= 299) setRepos(Array.from(response.data))
     })
   },[]);
-
+  console.log(typing)
   return (
     <Layout>
       <ContentContainer>
         <Section id="apresentacao">
           <ApresentationText>
-            Olá <span>😉</span>, me chamo Thauan Corrêa,
+            <Typed  
+            strings={['Olá 😉 , me chamo Thauan Corrêa,']}
+            typeSpeed={50}
+            autoInsertCss={true}
+            />
           </ApresentationText>
-          <Developer>Desenvolvedor Front-End</Developer>
+          <Developer>
+            <Typed
+              strings={['Desenvolvedor Front End']}
+              typeSpeed={40}
+              startDelay={600}
+            />
+          </Developer>
           <ApresentationText>
             Não sei o que escrever 
             </ApresentationText>
@@ -101,7 +113,7 @@ function Home() {
         <Divider/>
         <Section id="projetos">
           <Title>Meus projetos</Title>
-          {repos === [] ? (<div><p>Carregando...</p></div>) : (<ListOfCards repos={repos}/> ) }
+          {repos === [] ? (<div/>) : (<ListOfCards repos={repos}/> ) }
           <Git>
             Para ver a lista completa acesse:{" "}
             <Link href="https://github.com/ThauanLK" target="blank"> https://github.com/ThauanLK</Link>

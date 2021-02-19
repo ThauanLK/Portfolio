@@ -24,6 +24,7 @@ export const Card = styled.div`
     -webkit-box-shadow: -10px 10px 5px 0px var(--shadow);
     -moz-box-shadow: -10px 10px 5px 0px var(--shadow);
     box-shadow: -10px 10px 5px 0px var(--shadow);
+   
     &:hover{
         Img{
          opacity:0.3; 

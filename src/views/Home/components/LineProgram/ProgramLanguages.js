@@ -63,6 +63,12 @@ const ProgramLanguages = [
         name:"Inglês",
         level: 4,
         image: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg",
+    },
+    {
+        name:"C",
+        level: 1,
+        image: "https://cdn.iconscout.com/icon/free/png-512/c-programming-569564.png",
+
     }
 ]
 

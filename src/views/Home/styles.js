@@ -40,6 +40,7 @@ export const Section = styled.section`
 `;
 
 export const Git = styled.p`
+  margin-top: 5%;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 `;
