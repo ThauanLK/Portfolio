@@ -92,7 +92,18 @@ export const Button = styled.a`
   line-height: 1.5;
   text-decoration: none;
   cursor: pointer;
-  &:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+  transition: background-color 350ms ease, border-color 350ms ease,
+    transform 350ms ease, box-shadow 350ms ease;
+  &:hover, &:focus-visible {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgb(15 118 110 / 16%);
+  }
+  &:active { transform: translateY(0); box-shadow: none; }
+  @media (prefers-reduced-motion: reduce) {
+    &:hover, &:focus-visible, &:active { transform: none; }
+  }
 `;
 export const ButtonContainer = styled.div`margin-top: 32px;`;
 export const BoldText = styled.h4`
@@ -138,14 +149,27 @@ export const Role = styled.p`
   margin-bottom: 20px;
 `;
 export const HeroMark = styled.div`
-  display: grid;
-  place-items: center;
-  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 220px;
+  justify-self: center;
+  padding: 0;
+  overflow: hidden;
   aspect-ratio: 1;
-  background: var(--tint-green);
+  background: var(--background);
   border-radius: 50%;
   border: 1px solid #BDD7D1;
-  img { width: 100%; height: auto; }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    /* Compensa as margens do PNG sem alterar o arquivo original. */
+    transform: scale(1.3) translateX(-2%);
+  }
   @media (max-width: 600px) { display: none; }
 `;
 export const HeroActions = styled.div`
@@ -154,4 +178,38 @@ export const HeroActions = styled.div`
   flex-wrap: wrap;
   gap: 16px 24px;
   margin-top: 28px;
+`;
+export const DownloadLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 300ms ease;
+  span {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -3px;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 300ms ease;
+    }
+  }
+  svg { flex-shrink: 0; transition: transform 300ms ease; }
+  &:hover, &:focus-visible {
+    color: var(--accent-hover);
+    span::after { transform: scaleX(1); }
+    svg { transform: translateY(2px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    &:hover svg, &:focus-visible svg { transform: none; }
+  }
 `;

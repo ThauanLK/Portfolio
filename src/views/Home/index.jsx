@@ -1,22 +1,21 @@
 import React, {useEffect, useState} from "react";
 import { Container,
-  Developer, Role, HeroMark, HeroActions,
+  Developer, Role, HeroMark, HeroActions, DownloadLink,
   ApresentationText,
   Text,
   Section,
   ContentContainer,
   Title,
   Button,
-  ButtonContainer,
   Divider,
-  Li,
-  Subtitle, Git, Link, ItalicText, BoldText } from "./styles";
+  Subtitle, Git, Link } from "./styles";
 import Layout from "./components/Layout/index";
 import {getRepo} from "../../services/index-git";
 import Curriculo from "../../documents/CurriculoThauan.pdf"
 import {EachLine} from "./components/LineProgram/index";
-import {AboutMe,Academics,XpAnterior} from "../../data/profile";
-import logo from "../../assets/logo_tco.svg";
+import {AboutMe} from "../../data/profile";
+import logo from "../../assets/logo-apresentacao.png";
+import ResumeTimeline from "./components/ResumeTimeline/index";
 import ListOfCards from "./components/ItemOfList/index";
 
 function Home() {
@@ -35,16 +34,21 @@ function Home() {
       <ContentContainer>
         <Section id="apresentacao">
           <div>
-            <ApresentationText>Desenvolvimento & qualidade de software</ApresentationText>
+            <ApresentationText>Desenvolvimento backend · Java & Spring Boot</ApresentationText>
             <Developer>Thauan Corrêa</Developer>
-            <Role>Analista de sistemas</Role>
+            <Role>Desenvolvedor backend Java</Role>
             <ApresentationText>
-              Experiência em desenvolvimento front-end e automação de testes.
+              Atuo no desenvolvimento backend com Java e Spring Boot.
               Conheça os projetos e as experiências que fazem parte da minha trajetória.
             </ApresentationText>
             <HeroActions>
               <Button href="#projetos">Explorar projetos</Button>
-              <Link href={Curriculo} download="Curriculo-Thauan.pdf">Baixar currículo</Link>
+              <DownloadLink href={Curriculo} download="Curriculo-Thauan.pdf">
+                <span>Baixar currículo</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4" />
+                </svg>
+              </DownloadLink>
             </HeroActions>
           </div>
           <HeroMark aria-hidden="true"><img src={logo} alt="" /></HeroMark>
@@ -59,31 +63,9 @@ function Home() {
         <Divider/>
         <Section id="curriculo">
           <Title>Currículo</Title>
-          <Subtitle>Formação acadêmica</Subtitle>
-          <ul>
-          {Academics.map((academic) => (
-            <Li key={academic.title}>
-              <BoldText>{academic.title}</BoldText>
-              <ItalicText>{academic.year}</ItalicText>
-              <Text>{academic.grade}</Text>
-            </Li>
-          ))}
-          </ul>
-          <Subtitle>Experiência profissional</Subtitle>
-          <ul>
-          {XpAnterior.map((eachXp,index)=>(
-                <Li  key={index}>
-                  <BoldText>{eachXp.title}</BoldText>
-                  <ItalicText>{eachXp.period}</ItalicText>
-                  <Text>{eachXp.description}</Text>
-                </Li>
-          ))}
-          </ul>
+          <ResumeTimeline />
           <Subtitle>Conhecimentos</Subtitle>
           <EachLine/>
-          <ButtonContainer>
-            <Button as="a" href={Curriculo} download="Curriculo-Thauan.pdf">Baixar currículo</Button>
-          </ButtonContainer>
         </Section>
         <Divider/>
         <Section id="projetos">

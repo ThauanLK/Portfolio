@@ -1,11 +1,20 @@
 export const XpAnterior = [
     {
         title:"Desenvolvedor Front End",
-        period: "INJunior Outubro de 2019 ~ Fevereiro de 2021",
+        organization: "INJunior",
+        period: "Out 2019 — Fev 2021",
+        highlights: [
+            "Desenvolvimento front-end com HTML, CSS, WordPress, React e React Native.",
+            "Instrutor e monitor em treinamentos de desenvolvimento e banco de dados."
+        ],
+        technologies: ["HTML", "CSS", "WordPress", "React", "React Native"],
         description: "Nesta empresa eu fui desenvolvedor front-end, foi minha primeira experiência, e utilizei HTML5, CSS3, Wordpress, React.js e React Native durante o meu período lá. Além de desenvolvedor, eu apliquei treinamentos, sendo instrutor e monitor, de todas as tecnologias anteriormente ditas e de Banco de dados também."    },
     {
-        title: "Estágiario em Automação de Testes (QA)",
-        period:"PrimeUp Novembro de 2020 ~ Atualmente",
+        title: "Estagiário em Automação de Testes (QA)",
+        organization: "PrimeUp",
+        period: "Nov 2020 — Atualmente",
+        highlights: ["Automação de testes de consulta e resposta de banco de dados com Cucumber, Java e JUnit."],
+        technologies: ["Java", "Cucumber", "JUnit"],
         description:"Utilização de Cucumber, Java e Junit para automatizar testes de consulta e resposta de um banco de dados"
     }
 ]
@@ -24,5 +33,5 @@ export const Academics = [
 ]
 
 export const AboutMe = {
-    text: "Atuo como analista de sistemas e tenho experiência com desenvolvimento front-end e automação de testes. Neste portfólio compartilho minha trajetória e projetos de programação."
+    text: "Atuo como analista no desenvolvimento backend com Java e Spring Boot. Minha trajetória também inclui experiências com desenvolvimento front-end e automação de testes. Neste portfólio compartilho meus projetos e minha evolução profissional."
 }
