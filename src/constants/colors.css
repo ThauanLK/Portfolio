@@ -1,9 +1,14 @@
 :root {
-  --black:#333333;
-  --white:#fafafafa;
-  --blue: #179498;
-  --blue2: #1EBFC4;
-  --pressedButton: #13797D;
-  --shadow: #999;
-  --pressedShadow: #666;
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+  --heading: #0F172A;
+  --text: #475569;
+  --accent: #0F766E;
+  --accent-hover: #115E59;
+  --border: #E2E8F0;
+  --navy: #0F172A;
+  --petroleum: #0F766E;
+  --tint-green: #E6F2EF;
+  --tint-blue: #EAF0F7;
+  --on-accent: #FFFFFF;
 }

@@ -24,5 +24,5 @@ export const Academics = [
 ]
 
 export const AboutMe = {
-    text: " Pokem ipsum dolor sit amet Hariyama Skiploom I know it's my destiny Ponyta Boldore Swift. Ut labore et dolore magna aliqua Chatot Rotom Rotom Silver Pokemon Honchkrow. Celadon Department Store Marshtomp Quagsire Eelektross Octillery Turtwig Sawsbuck. Fire Tangela Sunflora make it double Ash's mother Toxicroak Rotom. Splash Ash Ketchum Meowth Charmeleon Ho-oh Blaziken Bouffalant. Growl Probopass Latias Gothita Volbeat Fuchsia City Johto. Kanto Moltres Farfetch'd Trubbish Sinnoh Silph Scope Shaymin. Ash Storm Badge we're blasting off again Pichu Scolipede Solrock Piplup. Body Slam Rhyhorn Cofagrigus Pidgeotto Vigoroth Magby Rotom. Ivysaur Electric Dodrio Froslass Fighting to train them is my cause a wild Pokemon appeared."
+    text: "Atuo como analista de sistemas e tenho experiência com desenvolvimento front-end e automação de testes. Neste portfólio compartilho minha trajetória e projetos de programação."
 }

@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Portfólio — Thauan Corrêa
 
-## Available Scripts
+Portfólio pessoal em React, com experiência profissional, currículo e projetos públicos do GitHub. Hospedagem na Vercel.
 
-In the project directory, you can run:
+## Desenvolvimento
 
-### `yarn start`
+Use Node 24 (arquivo `.nvmrc`) e npm. Não misture npm e Yarn: o lockfile oficial é `package-lock.json`.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```sh
+nvm use
+npm ci
+npm run dev
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+O endereço local aparece no terminal. Comandos de validação:
 
-### `yarn test`
+```sh
+npm test
+npm run build
+npm run preview
+npm audit
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Os testes usam o runner nativo do Node e cobrem a integração com GitHub sem depender da rede. O build gera `dist/`. A CI executa instalação reproduzível, testes, build e auditoria das dependências de produção.
 
-### `yarn build`
+## Organização
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `src/index.jsx`: inicialização do React e rotas.
+- `src/views/Home/`: página principal, estilos e componentes locais.
+- `src/data/profile.js`: biografia, formação e experiência; revisar as datas antigas antes de publicar.
+- `src/services/index-git.js`: consulta ao GitHub, com tratamento de erro e cancelamento.
+- `src/documents/`: currículo em PDF; substituir pela versão atual.
+- `src/constants/`: estilos globais e cores.
+- `public/`: arquivos estáticos.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+O contato usa o LinkedIn. O formulário anterior não enviava mensagens; foi removido. Uma futura integração de envio precisa de backend/provedor, validação, proteção contra abuso e feedback de sucesso/erro. Segredos não devem ficar em variáveis `VITE_*`, pois elas são públicas no navegador.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Vercel e domínio próprio
 
-### `yarn eject`
+`vercel.json` configura Vite, saída `dist` e fallback para rotas da SPA, incluindo acesso direto a `/lucas`. No painel do projeto, use Node 24 e confira se não há configuração antiga de Create React App ou saída `build` sobrescrevendo o projeto. Valide primeiro um Preview Deployment.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Para usar domínio próprio, registre o domínio, adicione-o em **Settings → Domains** do projeto e configure no registrador os registros DNS indicados pela Vercel. Escolha um endereço principal e redirecione a variante com/sem `www`. Não é necessário trocar a hospedagem.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Referências: [Vite na Vercel](https://vercel.com/docs/frameworks/frontend/vite) e [configuração de domínio](https://vercel.com/docs/domains/working-with-domains/add-a-domain).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Manutenção
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+O Dependabot agrupa atualizações minor/patch semanalmente; mudanças major continuam separadas para revisão. Consulte [o diagnóstico e próximos passos](docs/modernizacao.md) para tratar os PRs antigos e evoluir o conteúdo.

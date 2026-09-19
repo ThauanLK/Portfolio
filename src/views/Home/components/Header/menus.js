@@ -4,11 +4,11 @@ const MenuOptions =    [
         url: "#sobre"
     },
     {
-        title: "Curriculo",
+        title: "Currículo",
         url: "#curriculo"
     },
     {
-        title: "Meus Projetos",
+        title: "Projetos",
         url: "#projetos"
     },
     {
