@@ -131,6 +131,7 @@ table {
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--background); color: var(--text); line-height: 1.6; }
 section { scroll-margin-top: 144px; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
