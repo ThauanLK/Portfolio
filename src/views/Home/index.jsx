@@ -15,6 +15,7 @@ import Curriculo from "../../documents/CurriculoThauan.pdf"
 import {EachLine} from "./components/LineProgram/index";
 import {AboutMe} from "../../data/profile";
 import logo from "../../assets/logo-apresentacao.png";
+import Contact from "./components/Contact/index";
 import ResumeTimeline from "./components/ResumeTimeline/index";
 import ListOfCards from "./components/ItemOfList/index";
 
@@ -80,10 +81,7 @@ function Home() {
           </Git>
         </Section>
         <Divider/>
-        <Section id="contato">
-          <Title>Entre em contato</Title>
-          <Text>Entre em contato pelo <Link href="https://www.linkedin.com/in/thauan-corr%C3%AAa-de-oliveira-525334193/" target="_blank" rel="noopener noreferrer">LinkedIn</Link>.</Text>
-        </Section>
+        <Contact />
       </ContentContainer>
     </Layout>
   );

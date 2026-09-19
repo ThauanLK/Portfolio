@@ -21,20 +21,9 @@ export const Section = styled.section`
     gap: 48px;
     padding: 80px 0;
   }
-  &#contato {
-    --heading: #FFFFFF;
-    --text: #FFFFFF;
-    --accent: #FFFFFF;
-    --accent-hover: #CCFBF1;
-    margin-top: 48px;
-    padding: 40px 48px;
-    border-radius: 16px;
-    background: var(--petroleum);
-  }
   @media (max-width: 600px) {
     padding: 40px 0;
     &#apresentacao { padding: 48px 0; grid-template-columns: 1fr; gap: 0; }
-    &#contato { padding: 32px 24px; }
   }
 `;
 export const Git = styled.p`
