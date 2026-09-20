@@ -26,6 +26,10 @@ export default function useActiveSection(options, headerRef) {
       if (frame === null) frame = window.requestAnimationFrame(update);
     };
 
+    // O HTML inicial da SPA ainda não contém as seções quando o navegador
+    // tenta resolver uma âncora. Posiciona o destino após a montagem do React.
+    const initialTarget = document.getElementById(window.location.hash.slice(1));
+    initialTarget?.scrollIntoView({ behavior: 'instant' });
     update();
     window.addEventListener('scroll', scheduleUpdate, { passive: true });
     window.addEventListener('resize', scheduleUpdate);

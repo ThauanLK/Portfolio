@@ -1,7 +1,10 @@
 import { styled } from 'styled-components';
 import '../../constants/colors.css';
 
-export const Container = styled.div`max-width: 720px;`;
+export const Container = styled.div`
+  max-width: 720px;
+  p + p { margin-top: 20px; }
+`;
 export const ContentContainer = styled.div`
   width: min(100%, 1080px);
   margin: 0 auto;

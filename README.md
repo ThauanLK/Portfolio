@@ -15,19 +15,49 @@ npm run dev
 O endereço local aparece no terminal. Comandos de validação:
 
 ```sh
-npm test
+npm run test:unit
 npm run build
 npm run preview
 npm audit
 ```
 
-Os testes usam o runner nativo do Node e cobrem a integração com GitHub sem depender da rede. O build gera `dist/`. A CI executa instalação reproduzível, testes, build e auditoria das dependências de produção.
+O build gera `dist/`. A CI executa instalação reproduzível, testes unitários e testes de navegador sobre o build de produção, além da auditoria das dependências de produção.
+
+## Testes automatizados
+
+Na primeira execução, instale o navegador do Playwright:
+
+```sh
+npx playwright install chromium
+# Em Linux/CI, se faltarem bibliotecas de sistema:
+npx playwright install --with-deps chromium
+```
+
+```sh
+npm test                # Unitários + navegador (desktop e celular)
+npm run test:unit       # Testes rápidos, sem navegador
+npm run test:e2e        # Build de produção + testes no Chromium
+npm run test:e2e:ui     # Interface interativa do Playwright
+npm run test:report     # Relatório HTML da última execução
+```
+
+O Playwright inicia e encerra seu próprio servidor em `http://127.0.0.1:4174`; deixe essa porta livre. O servidor de desenvolvimento habitual pode continuar rodando em outra porta.
+
+- **Unitários:** seleção da seção ativa e consulta ao GitHub (sucesso, erro HTTP, falha de rede e lista vazia).
+- **Navegador:** renderização, largura responsiva, menu e âncoras, tooltip, detalhes das experiências pelo teclado, download real do PDF, cards de projetos, carregamento e erros da API, redes fixas, preferência por movimento reduzido e página 404.
+- **Ambientes:** Chromium desktop e emulação de celular Pixel 7. Não substituem validação em dispositivos físicos, Safari ou Firefox.
+
+Os testes usam respostas simuladas do GitHub e bloqueiam fontes externas para não depender desses serviços. Eles verificam o comportamento da aplicação, não a disponibilidade do GitHub, LinkedIn ou Vercel. O PDF e os demais assets locais são servidos pelo build real.
+
+Em caso de falha, capturas de tela e traces ficam em `test-results/`; o relatório fica em `playwright-report/`. A CI anexa esses arquivos por sete dias. Esses diretórios não são versionados.
+
+Referência: [servidor de testes do Playwright](https://playwright.dev/docs/test-webserver).
 
 ## Organização
 
 - `src/index.jsx`: inicialização do React e rotas.
 - `src/views/Home/`: página principal, estilos e componentes locais.
-- `src/data/profile.js`: biografia, formação e experiência; revisar as datas antigas antes de publicar.
+- `src/data/profile.js`: biografia, formação e experiência. Veja [como adicionar atividades acadêmicas](docs/formacao.md).
 - `src/services/index-git.js`: consulta ao GitHub, com tratamento de erro e cancelamento.
 - `src/documents/`: currículo em PDF; substituir pela versão atual.
 - `src/constants/`: estilos globais e cores.

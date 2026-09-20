@@ -1,5 +1,5 @@
 // Tecnologias usadas atualmente, conforme o foco profissional informado.
-export const currentStack = ['Java', 'Spring Boot'];
+export const currentStack = ['Java', 'Spring Boot','MySql'];
 
 // Conhecimentos da trajetória. A lista não representa níveis de proficiência.
 export const skillGroups = [

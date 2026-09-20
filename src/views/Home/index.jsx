@@ -58,7 +58,9 @@ function Home() {
         <Section id="sobre">
           <Title>Sobre Mim</Title>
           <Container>
-            <Text>{AboutMe.text}</Text>
+            {AboutMe.text.split(/\n\s*\n/).filter((paragraph) => paragraph.trim()).map((paragraph) => (
+              <Text key={paragraph}>{paragraph.trim()}</Text>
+            ))}
           </Container>
         </Section>
         <Divider/>

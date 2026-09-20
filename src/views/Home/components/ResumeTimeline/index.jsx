@@ -1,11 +1,22 @@
 import React from 'react';
 import { Academics, XpAnterior } from '../../../../data/profile';
-import { GroupTitle, Timeline, Entry, Marker, Card, CardHeader, Heading, Organization, Period, Responsibilities, Technologies } from './styles';
+import { GroupTitle, Timeline, Entry, Marker, Card, CardHeader, Heading, Organization, Period, Responsibilities, Technologies, ExperienceDetails, Description, AcademicList, AcademicItem, ActivityTitle, ActivityDescription, FeaturedBadge } from './styles';
 
 function TimelineIcon({ education = false }) {
   return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     {education ? <><path d="m2 8 10-5 10 5-10 5-10-5Zm4 2v7c4 3 8 3 12 0v-7M22 8v7" /></> : <><rect x="3" y="7" width="18" height="14" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12a22 22 0 0 0 18 0M12 11v4" /></>}
   </svg>;
+}
+
+export function AcademicActivities({ activities = [] }) {
+  if (!activities.length) return null;
+  return <AcademicList aria-label="Atividades e conquistas acadêmicas">
+    {activities.map((activity) => <AcademicItem key={activity.title} $featured={activity.featured === true}>
+      {activity.featured === true && <FeaturedBadge>Em destaque</FeaturedBadge>}
+      <ActivityTitle>{activity.title}</ActivityTitle>
+      {activity.description && <ActivityDescription>{activity.description}</ActivityDescription>}
+    </AcademicItem>)}
+  </AcademicList>;
 }
 
 export default function ResumeTimeline() {
@@ -20,6 +31,17 @@ export default function ResumeTimeline() {
             <Period>{experience.period}</Period>
           </CardHeader>
           <Responsibilities>{experience.highlights.map((item) => <li key={item}>{item}</li>)}</Responsibilities>
+          {experience.description?.length > 0 && <ExperienceDetails>
+            <summary>
+              <span className="details-closed">Ver detalhes da experiência</span>
+              <span className="details-open">Ocultar detalhes da experiência</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <Description>
+              {(Array.isArray(experience.description) ? experience.description : [experience.description])
+                .map((item) => <li key={item}>{item}</li>)}
+            </Description>
+          </ExperienceDetails>}
           <Technologies aria-label="Tecnologias utilizadas">{experience.technologies.map((tech) => <li key={tech}>{tech}</li>)}</Technologies>
         </Card>
       </Entry>)}
@@ -33,6 +55,7 @@ export default function ResumeTimeline() {
             <div><Heading>{academic.grade}</Heading><Organization>{academic.title}</Organization></div>
             <Period>{academic.year}</Period>
           </CardHeader>
+          <AcademicActivities activities={academic.activities} />
         </Card>
       </Entry>)}
     </Timeline>

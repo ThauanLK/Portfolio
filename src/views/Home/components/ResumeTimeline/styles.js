@@ -102,3 +102,79 @@ export const Technologies = styled.ul`
     font-size: 0.75rem;
   }
 `;
+
+export const ExperienceDetails = styled.details`
+  margin-top: 16px;
+  summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    width: fit-content;
+    max-width: 100%;
+    color: var(--accent-hover);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    border-radius: 4px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary:hover { color: var(--petroleum); text-decoration: underline; text-underline-offset: 4px; }
+  svg { flex-shrink: 0; transition: transform 250ms ease; }
+  .details-open { display: none; }
+  &[open] {
+    .details-closed { display: none; }
+    .details-open { display: inline; }
+    svg { transform: rotate(180deg); }
+  }
+`;
+
+export const Description = styled.ul`
+  padding: 16px 0 0 20px;
+  margin-top: 4px;
+  border-top: 1px solid #CCD8E4;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+  li { list-style: disc; padding-left: 4px; }
+  li + li { margin-top: 10px; }
+  li::marker { color: var(--petroleum); }
+`;
+
+export const AcademicList = styled.ul`
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+`;
+export const AcademicItem = styled.li`
+  padding: 16px;
+  background: ${({ $featured }) => $featured ? 'var(--tint-green)' : 'var(--surface)'};
+  border: 1px solid ${({ $featured }) => $featured ? '#BDD7D1' : 'var(--border)'};
+  border-left: 3px solid ${({ $featured }) => $featured ? 'var(--petroleum)' : '#CBD5E1'};
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+`;
+export const FeaturedBadge = styled.span`
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--petroleum);
+  color: #FFFFFF;
+  font-size: 0.7rem;
+  font-weight: 600;
+`;
+export const ActivityTitle = styled.h5`
+  font-weight: 600;
+  color: var(--heading);
+  font-size: 0.9rem;
+  line-height: 1.6;
+`;
+export const ActivityDescription = styled.p`
+  margin-top: 6px;
+  color: var(--text);
+  font-size: 0.875rem;
+  line-height: 1.8;
+`;

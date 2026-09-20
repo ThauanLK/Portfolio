@@ -25,3 +25,8 @@ yarn-error.log*
 
 .eslintrc.json
 /dist
+
+# Playwright
+/playwright-report/
+/test-results/
+/blob-report/

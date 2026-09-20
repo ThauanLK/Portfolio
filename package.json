@@ -11,7 +11,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node --test"
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "node --test src/services/*.test.js src/hooks/*/*.test.js tests/unit/*.test.js",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:report": "playwright show-report"
   },
   "dependencies": {
     "react": "^19.3.0",
@@ -20,7 +24,8 @@
     "styled-components": "^6.5.3"
   },
   "devDependencies": {
-    "vite": "^8.3.0",
-    "@vitejs/plugin-react": "^6.1.1"
+    "@playwright/test": "^1.63.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.0"
   }
 }
